@@ -6,6 +6,7 @@ export class AppService {
     constructor(private configService: ConfigService) { }
     getHello(): string {
         const e = this.configService.get('NODE_ENV');
-        return 'Hello World! ' + e;
+        const p = this.configService.get('PORT');
+        return 'Hello World! ' + e + p;
     }
 }
